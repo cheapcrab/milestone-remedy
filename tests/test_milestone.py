@@ -36,6 +36,16 @@ def accepted(direct_vm,c):
         c.accept(cid)
     return cid
 
+
+@pytest.mark.parametrize('repo',['.','..'])
+def test_dot_repository_cannot_change_the_commit_namespace(direct_vm,direct_deploy,repo):
+    c=deploy(direct_vm,direct_deploy)
+    cid=accepted(direct_vm,c)
+    url='https://raw.githubusercontent.com/example/'+repo+'/'+'a'*40+'/main/evidence.txt'
+    serve(direct_vm,url,DOC_A)
+    with direct_vm.expect_revert('noncanonical'):
+        c.submit_evidence(cid,url,SHA_A)
+
 def disputed(direct_vm,c):
     cid=accepted(direct_vm,c)
     serve(direct_vm,URL_A,DOC_A)

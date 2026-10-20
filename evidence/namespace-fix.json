@@ -1,0 +1,29 @@
+{
+  "at": "2026-10-20T21:38:14.168Z",
+  "profileSeq": 10,
+  "slug": "milestone-remedy",
+  "previous_deployed_source_sha256": "ebcd6d86ff564a3ca8ec49fd9042ddd21e2691c270f5ea243a99e2e61ff120fe",
+  "corrected_local_source_sha256": "066e7d73cb10d45df23c6cff21c27ca094ac40b6d8fa1d4c44ba800dcb5ac6f0",
+  "existing_deployed_contract": "0x07039a17D842cB1D77C765aF6982DbA11763A6f2",
+  "local_tests_passed": 23,
+  "local_full_sdk_checks": {
+    "tests": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "lint": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "schema": {
+      "exit_code": 0,
+      "passed": true
+    }
+  },
+  "red_log": "evidence/tdd-dot-repository-red.log",
+  "status": "local_fix_green_pending_onchain_and_public_repository_update",
+  "onchainUpdateSent": false,
+  "publicSourceUpdateSent": false,
+  "submissionUpdateSent": false,
+  "scope": "Reject dot-only repository segments in the complete URL path. Locked content byte SHA256 was and remains verified; no content hash bypass claimed."
+}

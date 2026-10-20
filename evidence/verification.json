@@ -1,6 +1,6 @@
 {
   "source": "milestone_remedy.py",
-  "source_sha256": "ebcd6d86ff564a3ca8ec49fd9042ddd21e2691c270f5ea243a99e2e61ff120fe",
+  "source_sha256": "066e7d73cb10d45df23c6cff21c27ca094ac40b6d8fa1d4c44ba800dcb5ac6f0",
   "genvm_release": "v0.2.12",
   "runner": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
   "stdlib": "py-lib-genlayer-std:11rhn002yfajawsz7fai6mykznbxkxs6l91iskj5cm82c92qhy3v",
@@ -26,16 +26,34 @@
   },
   "live_consensus_tested": false,
   "deployment": {
+    "at": "2026-10-20T22:18:53.436Z",
+    "profileSeq": 10,
     "title": "MilestoneRemedy",
     "workId": "profile10-ic-milestone-remedy",
-    "contractAddress": "0x07039a17D842cB1D77C765aF6982DbA11763A6f2",
-    "transactionHash": "0x27032a589256f8e3b5b83cba5e1cc563f3ff65661dbc2345ec9a278f849cb2ad",
+    "version": "namespace-path-v2",
+    "supersedes": {
+      "contractAddress": "0x07039a17D842cB1D77C765aF6982DbA11763A6f2",
+      "sourceSha256": "ebcd6d86ff564a3ca8ec49fd9042ddd21e2691c270f5ea243a99e2e61ff120fe"
+    },
+    "existingSubmissionIdPrefix": "62bb7e26",
+    "contractAddress": "0x72Ea300bA70e4fCa01279aEfD7509A08D6d22f86",
+    "transactionHash": "0xf50002e8a038bcc70382a880c02163d76e5c45e8279465d2d1775d2ab2d57389",
+    "sourceSha256": "066e7d73cb10d45df23c6cff21c27ca094ac40b6d8fa1d4c44ba800dcb5ac6f0",
+    "onchainSourceSha256": "066e7d73cb10d45df23c6cff21c27ca094ac40b6d8fa1d4c44ba800dcb5ac6f0",
     "network": "GenLayer Studio",
     "chainId": 61999,
-    "sourceSha256": "ebcd6d86ff564a3ca8ec49fd9042ddd21e2691c270f5ea243a99e2e61ff120fe",
-    "constructorArgs": [],
     "state": "FINALIZED",
-    "executionResult": "SUCCESS"
-  },
-  "live_scope": "constructor deployment only; business flow external I/O mocked in direct tests"
+    "executionResult": "SUCCESS",
+    "value": "0",
+    "constructorArgs": [],
+    "publicSourceUpdateSent": false,
+    "submissionUpdateSent": false,
+    "doesNotConsumeNewWorkSlot": true,
+    "verifiedAt": "2026-10-20T22:20:31.219Z",
+    "executionMode": "NORMAL",
+    "leaderOnly": false,
+    "consensusResult": "MAJORITY_AGREE",
+    "finalizedVerifiedAt": "2026-10-20T22:21:18.873Z",
+    "liveBusinessFlowVerified": false
+  }
 }
