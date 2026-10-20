@@ -1,0 +1,41 @@
+{
+  "source": "milestone_remedy.py",
+  "source_sha256": "ebcd6d86ff564a3ca8ec49fd9042ddd21e2691c270f5ea243a99e2e61ff120fe",
+  "genvm_release": "v0.2.12",
+  "runner": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
+  "stdlib": "py-lib-genlayer-std:11rhn002yfajawsz7fai6mykznbxkxs6l91iskj5cm82c92qhy3v",
+  "packages": {
+    "genlayer-test": "0.29.2",
+    "genvm-linter": "0.11.0",
+    "cloudpickle": "3.1.2",
+    "pytest": "9.1.1"
+  },
+  "checks": {
+    "tests": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "lint": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "schema": {
+      "exit_code": 0,
+      "passed": true
+    }
+  },
+  "live_consensus_tested": false,
+  "deployment": {
+    "title": "MilestoneRemedy",
+    "workId": "profile10-ic-milestone-remedy",
+    "contractAddress": "0x07039a17D842cB1D77C765aF6982DbA11763A6f2",
+    "transactionHash": "0x27032a589256f8e3b5b83cba5e1cc563f3ff65661dbc2345ec9a278f849cb2ad",
+    "network": "GenLayer Studio",
+    "chainId": 61999,
+    "sourceSha256": "ebcd6d86ff564a3ca8ec49fd9042ddd21e2691c270f5ea243a99e2e61ff120fe",
+    "constructorArgs": [],
+    "state": "FINALIZED",
+    "executionResult": "SUCCESS"
+  },
+  "live_scope": "constructor deployment only; business flow external I/O mocked in direct tests"
+}

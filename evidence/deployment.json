@@ -1,0 +1,43 @@
+{
+  "at": "2026-10-20T19:46:04.177Z",
+  "title": "MilestoneRemedy",
+  "workId": "profile10-ic-milestone-remedy",
+  "contractAddress": "0x07039a17D842cB1D77C765aF6982DbA11763A6f2",
+  "transactionHash": "0x27032a589256f8e3b5b83cba5e1cc563f3ff65661dbc2345ec9a278f849cb2ad",
+  "network": "GenLayer Studio",
+  "chainId": 61999,
+  "sourceSha256": "ebcd6d86ff564a3ca8ec49fd9042ddd21e2691c270f5ea243a99e2e61ff120fe",
+  "constructorArgs": [],
+  "state": "FINALIZED",
+  "executionResult": "SUCCESS",
+  "receipt": {
+    "hash": "0x27032a589256f8e3b5b83cba5e1cc563f3ff65661dbc2345ec9a278f849cb2ad",
+    "status": "FINALIZED",
+    "result": 6,
+    "resultName": "MAJORITY_AGREE",
+    "from": "0xDdE8B1678Df716c926a2952E5b56fE99e71De50d",
+    "to": "0x07039a17D842cB1D77C765aF6982DbA11763A6f2",
+    "value": 0,
+    "executionMode": "NORMAL",
+    "leaderOnly": false,
+    "votes": [
+      "AGREE",
+      "IDLE",
+      "AGREE",
+      "IDLE",
+      "AGREE"
+    ],
+    "sourceBytesHash": "ebcd6d86ff564a3ca8ec49fd9042ddd21e2691c270f5ea243a99e2e61ff120fe",
+    "executionResults": [
+      {
+        "mode": "leader",
+        "result": "SUCCESS"
+      },
+      {
+        "mode": "validator",
+        "result": "SUCCESS"
+      }
+    ]
+  },
+  "liveScope": "Constructor deployment only. Full bilateral evidence/appeal flow not live-tested."
+}

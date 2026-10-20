@@ -1,0 +1,1 @@
+{"ok":false,"lint":{"ok":false,"passed":2,"warnings":[{"code":"E010","msg":"gl.nondet.* call in '_judgment.<locals>.derive' not reachable from equivalence principle block","line":109,"col":17}]},"validate":{"ok":true,"contract":"MilestoneRemedy","methods":11,"view_methods":2,"write_methods":9,"ctor_params":0}}

@@ -1,0 +1,60 @@
+WARNING: File `gltest.config.yaml` not found in the current directory, using default config, create a `gltest.config.yaml` file to manage multiple networks
+INFO: Using the following configuration:
+INFO:   RPC URL: http://127.0.0.1:4000/api
+INFO:   Selected Network: localnet
+INFO:   Available networks: ['localnet', 'studionet', 'testnet_asimov', 'testnet_bradbury']
+INFO:   Selected chain type: localnet
+INFO:   Available chains: localnet, studionet, testnet_asimov, testnet_bradbury
+INFO:   Contracts directory: contracts
+INFO:   Artifacts directory: artifacts
+INFO:   Environment: .env
+INFO:   Default wait interval: 3000 ms
+INFO:   Default wait retries: 50
+INFO:   Leader only mode: False
+F                                                                        [100%]
+================================== FAILURES ===================================
+________________ test_consensus_ruling_and_deterministic_split ________________
+
+direct_vm = VMContext(_sender=b'\xdc\x18\xaa=\xb8\xbc\x91\xa6\xe3\x90\xa3^}\x08\x11$o\xf3\xab\x01', _origin=None, _contract_addres...m_mocks_hit=set(), _live_web_handler=None, _live_llm_handler=None, _gl_call_hook=None, _traces=[], _trace_enabled=True)
+direct_deploy = <function direct_deploy.<locals>._deploy at 0x0000014DCAFBC220>
+
+    def test_consensus_ruling_and_deterministic_split(direct_vm,direct_deploy):
+        """Catches absent source consensus, arbitrary split or missing final state."""
+        c=deploy(direct_vm,direct_deploy)
+>       cid=adjudicated(direct_vm,c)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_milestone.py:61: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_milestone.py:52: in adjudicated
+    cid=disputed(direct_vm,c)
+        ^^^^^^^^^^^^^^^^^^^^^
+tests\test_milestone.py:40: in disputed
+    cid=accepted(direct_vm,c)
+        ^^^^^^^^^^^^^^^^^^^^^
+tests\test_milestone.py:33: in accepted
+    cid=offer(c)
+        ^^^^^^^^
+tests\test_milestone.py:27: in offer
+    return c.offer(SUPPLIER,"Deliver the requested SDK example and public documentation.",100,60,120,180,60)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\..\tooling\.venv\Lib\site-packages\gltest\direct\loader.py:432: in _wrapped
+    return attr(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_contract_milestone_remedy.MilestoneRemedy object at 0x0000014DC95466C0>
+supplier = '0x1111111111111111111111111111111111111111'
+terms = 'Deliver the requested SDK example and public documentation.'
+amount_units = 100, accept_seconds = 60, delivery_seconds = 120
+evidence_seconds = 180, appeal_seconds = 60
+
+    @gl.public.write
+    def offer(self, supplier: str, terms: str, amount_units: int, accept_seconds: int, delivery_seconds: int, evidence_seconds: int, appeal_seconds: int) -> str:
+>       raise gl.vm.UserError("NOT_IMPLEMENTED")
+E       genlayer.gl.vm.UserError: UserError(message='NOT_IMPLEMENTED')
+
+milestone_remedy.py:10: UserError
+=========================== short test summary info ===========================
+FAILED tests/test_milestone.py::test_consensus_ruling_and_deterministic_split
+1 failed in 0.56s
